@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Case #001: The Stolen Laptop
 
 A browser based detective mystery game built with plain HTML, CSS, and JavaScript. You play as a detective investigating a stolen laptop, gathering evidence, interviewing suspects, and deciding who to arrest.
@@ -17,3 +18,7 @@ Just open pages/index.html in any modern browser. No installation needed.
 ## Tech Notes
 
 Built with vanilla JavaScript, using let and const, and DOM methods like createElement instead of innerHTML.
+=======
+# JS-Final-Project
+Solve a stolen laptop case by collecting clues and interrogating suspects. Built with vanilla JS.
+>>>>>>> 585c0eeeb8638af3d70886b73512a1ef60484b5c
