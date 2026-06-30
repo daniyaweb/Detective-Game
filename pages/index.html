@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CASE #001: The Stolen Laptop</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="noir-theme">
+
+  <!-- HEADER SECTION  -->
+
+  <header id="case-header" class="case-header">
+
+    <!-- Confidential Stamp -->
+    <div id="confidential-stamp" class="confidential-stamp" role="img" aria-label="Confidential case file stamp">
+      CONFIDENTIAL
+    </div>
+
+    <div class="header-content">
+      <img id="detective-badge" class="detective-badge" src="../images/Detective_Badge.png" alt="Detective Badge">
+
+      <div class="header-text">
+        <h1 id="case-title" class="case-title">CASE #001</h1>
+        <h2 id="case-subtitle" class="case-subtitle">The Stolen Laptop</h2>
+
+        <p id="case-intro" class="case-intro">
+          It was just past 8 AM when Professor Owais unlocked his office door
+          and froze. His desk drawer hung open. His laptop bag sat empty on
+          the chair. The laptop itself, along with confidential university
+          records stored on it, was gone without a trace.
+          <br><br>
+          Building logs confirm only three people had access after hours
+          last night &mdash; and one of them is not telling the truth.
+          <br><br>
+          Five pieces of evidence remain at the scene, waiting to be
+          examined. Read every clue carefully, Detective. The truth is
+          in the details.
+        </p>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN GAME CONTAINER -->
+
+  <main id="game-container" class="game-container">
+
+    <!-- CASE FILE SECTION -->
+
+    <section id="case-file-section" class="case-file-section" aria-labelledby="case-file-heading">
+      <h2 id="case-file-heading" class="section-title">Official Case File</h2>
+
+      <dl class="case-file-details">
+
+        <div class="case-file-row" id="case-file-number-row">
+          <dt class="case-file-label">Case Number</dt>
+          <dd id="case-file-number" class="case-file-value">CASE #001</dd>
+        </div>
+
+        <div class="case-file-row" id="case-file-victim-row">
+          <dt class="case-file-label">Victim</dt>
+          <dd id="case-file-victim" class="case-file-value">Professor Owais</dd>
+        </div>
+
+        <div class="case-file-row" id="case-file-item-row">
+          <dt class="case-file-label">Missing Item</dt>
+          <dd id="case-file-item" class="case-file-value">
+            Personal laptop containing confidential university records
+          </dd>
+        </div>
+
+        <div class="case-file-row" id="case-file-location-row">
+          <dt class="case-file-label">Location</dt>
+          <dd id="case-file-location" class="case-file-value">
+            Faculty Office, Second Floor, Humanities Building
+          </dd>
+        </div>
+
+        <div class="case-file-row" id="case-file-status-row">
+          <dt class="case-file-label">Investigation Status</dt>
+          <dd id="case-file-status" class="case-file-value">Active</dd>
+        </div>
+
+        <div class="case-file-row" id="case-file-opened-row">
+          <dt class="case-file-label">Case Opened</dt>
+          <dd id="case-file-opened" class="case-file-value">October 14, 1936 &mdash; 8:05 AM</dd>
+        </div>
+
+        <div class="case-file-row" id="case-file-investigator-row">
+          <dt class="case-file-label">Lead Investigator</dt>
+          <dd id="case-file-investigator" class="case-file-value">Detective (Player-Assigned)</dd>
+        </div>
+
+        <div class="case-file-row" id="case-file-evidence-count-row">
+          <dt class="case-file-label">Evidence Logged</dt>
+          <dd id="case-file-evidence-count" class="case-file-value">0 of 5 items catalogued</dd>
+        </div>
+
+        <div class="case-file-row" id="case-file-classification-row">
+          <dt class="case-file-label">Classification</dt>
+          <dd id="case-file-classification" class="case-file-value">Confidential &mdash; Internal University Matter</dd>
+        </div>
+
+      </dl>
+    </section>
+
+    <!-- INVESTIGATION DASHBOARD -->
+
+    <section id="investigation-dashboard" class="investigation-dashboard" aria-labelledby="dashboard-heading">
+      <h2 id="dashboard-heading" class="section-title">Investigation Dashboard</h2>
+
+      <div class="dashboard-stats">
+
+        <!-- Detective Score -->
+        <div class="stat-box" id="score-box">
+          <span class="stat-label">Detective Score</span>
+          <span id="detective-score" class="stat-value">0</span>
+        </div>
+
+        <!-- Clues Found -->
+        <div class="stat-box" id="clues-found-box">
+          <span class="stat-label">Clues Found</span>
+          <span id="clues-found-count" class="stat-value">0 / 5</span>
+        </div>
+
+        <!-- Case Status -->
+        <div class="stat-box" id="case-status-box">
+          <span class="stat-label">Case Status</span>
+          <span id="case-status" class="stat-value">Open</span>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CRIME SCENE INVESTIGATION SECTION -->
+
+    <section id="crime-scene-section" class="crime-scene-section" aria-labelledby="crime-scene-heading">
+      <h2 id="crime-scene-heading" class="section-title">Crime Scene Investigation</h2>
+
+      <div id="clue-cards-container" class="clue-cards-container">
+
+        <!-- Clue 1: Security Camera Footage -->
+        <article id="clue-1" class="clue-card" data-clue-id="clue-1">
+          <img class="clue-image" src="../images/CCTV-Footage.png" alt="Security Camera Footage">
+          <h3 class="clue-title">Security Camera Footage</h3>
+          <p class="clue-preview">A figure slips back into the building long after closing time.</p>
+          <p id="clue-1-full-description" class="clue-full-description hidden">
+            The east-wing camera timestamps show a staff member badging
+            back into the building at 9:42 PM &mdash; nearly four hours
+            after they claimed to have left for the day. The footage is
+            too dark to confirm a face, but the badge swipe is logged
+            clearly, and the timing places someone exactly where they
+            said they would not be.
+          </p>
+          <button id="inspect-clue-1" class="inspect-btn" data-target="clue-1">
+            Inspect
+          </button>
+        </article>
+
+        <!-- Clue 2: Fingerprint on Coffee Cup -->
+        <article id="clue-2" class="clue-card" data-clue-id="clue-2">
+          <img class="clue-image" src="../images/fingerprint-evidence.png" alt="Fingerprint on Coffee Cup">
+          <h3 class="clue-title">Fingerprint on Coffee Cup</h3>
+          <p class="clue-preview">A single, still-warm cup sits beside the empty laptop bag.</p>
+          <p id="clue-2-full-description" class="clue-full-description hidden">
+            A partial fingerprint was lifted from the rim of a coffee cup
+            found on Professor Owais's desk. The professor does not drink
+            coffee, and the cup does not match the breakroom set used by
+            lab staff. Whoever sat at this desk last night stayed long
+            enough to finish a drink &mdash; meaning they were never in
+            a hurry to leave.
+          </p>
+          <button id="inspect-clue-2" class="inspect-btn" data-target="clue-2">
+            Inspect
+          </button>
+        </article>
+
+        <!-- Clue 3: Office Access Log -->
+        <article id="clue-3" class="clue-card" data-clue-id="clue-3">
+          <img class="clue-image" src="../images/office-access-log.png" alt="Office Access Log">
+          <h3 class="clue-title">Office Access Log</h3>
+          <p class="clue-preview">The electronic door log tells a different story than the suspects do.</p>
+          <p id="clue-3-full-description" class="clue-full-description hidden">
+            The keycard log for Professor Owais's office shows a single
+            entry at 9:40 PM &mdash; two minutes before the camera caught
+            someone re-entering the building. The card used belongs to a
+            staff member who swears they were nowhere near the office
+            that night. Logs do not lie. People sometimes do.
+          </p>
+          <button id="inspect-clue-3" class="inspect-btn" data-target="clue-3">
+            Inspect
+          </button>
+        </article>
+
+        <!-- Clue 4: Torn Reminder Note -->
+        <article id="clue-4" class="clue-card" data-clue-id="clue-4">
+          <img class="clue-image" src="../images/torn-note.png" alt="Torn Reminder Note">
+          <h3 class="clue-title">Torn Reminder Note</h3>
+          <p class="clue-preview">Half a handwritten note, torn and dropped near the filing cabinet.</p>
+          <p id="clue-4-full-description" class="clue-full-description hidden">
+            The surviving fragment reads: "&hellip;use the spare key, he
+            won't notice until Monday&hellip;" The handwriting is hurried,
+            as if the note was scrawled quickly and torn away before being
+            discarded. It was never meant to be found &mdash; and it names
+            the one item every suspect claims they never touched.
+          </p>
+          <button id="inspect-clue-4" class="inspect-btn" data-target="clue-4">
+            Inspect
+          </button>
+        </article>
+
+        <!-- Clue 5: Missing Spare Key -->
+        <article id="clue-5" class="clue-card" data-clue-id="clue-5">
+          <img class="clue-image" src="../images/missing-spare-key.png" alt="Missing Spare Key">
+          <h3 class="clue-title">Missing Spare Key</h3>
+          <p class="clue-preview">A spare office key, dropped and forgotten behind the cabinet.</p>
+          <p id="clue-5-full-description" class="clue-full-description hidden">
+            The department keeps exactly one spare key to Professor Owais's
+            office, normally signed out only by teaching staff for grading
+            access. That key was found wedged behind the filing cabinet
+            &mdash; far from its usual place on the front-desk hook, as if
+            someone needed it returned quietly, and quickly.
+          </p>
+          <button id="inspect-clue-5" class="inspect-btn" data-target="clue-5">
+            Inspect
+          </button>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- EVIDENCE BOARD SECTION -->
+
+    <section id="evidence-board-section" class="evidence-board-section" aria-labelledby="evidence-board-heading">
+      <h2 id="evidence-board-heading" class="section-title">Evidence Board</h2>
+      <p class="evidence-board-subtitle">Pin a clue below to examine it up close.</p>
+
+      <div id="evidence-board" class="evidence-board">
+
+        <div id="evidence-image-area" class="evidence-image-area">
+          <img id="evidence-image" class="evidence-image" src="" alt="">
+        </div>
+
+        <div class="evidence-text-area" aria-live="polite">
+          <h3 id="evidence-title" class="evidence-title">
+            No evidence pinned yet.
+          </h3>
+          <p id="evidence-description" class="evidence-description">
+            Select a clue from the crime scene above to pin it to the board
+            and read the detective's full notes.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- COLLECTED EVIDENCE SECTION -->
+
+    <section id="collected-evidence-section" class="collected-evidence-section"
+      aria-labelledby="collected-evidence-heading">
+      <h2 id="collected-evidence-heading" class="section-title">Collected Evidence</h2>
+      <p class="collected-evidence-subtitle">
+        Evidence you have inspected will be filed here.
+      </p>
+
+
+      <ul id="collected-evidence-list" class="collected-evidence-list">
+      </ul>
+    </section>
+
+    <!-- SUSPECT INTERVIEWS SECTION -->
+
+    <section id="suspect-interviews-section" class="suspect-interviews-section"
+      aria-labelledby="suspect-interviews-heading">
+      <h2 id="suspect-interviews-heading" class="section-title">Suspect Interviews</h2>
+
+      <form id="suspect-accusation-form" class="suspect-cards-container" aria-label="Suspect accusation selection">
+
+        <!-- Suspect 1: Sara Khan -->
+        <article id="suspect-1" class="suspect-card" data-suspect-id="suspect-1">
+          <img class="suspect-image" src="../images/sara-khan.png" alt="Sara Khan">
+          <h3 id="suspect-1-name" class="suspect-name">Sara Khan</h3>
+          <p id="suspect-1-occupation" class="suspect-occupation">Teaching Assistant</p>
+
+          <dl class="suspect-details">
+            <div class="suspect-detail-row">
+              <dt>Age</dt>
+              <dd id="suspect-1-age">26</dd>
+            </div>
+            <div class="suspect-detail-row">
+              <dt>Department</dt>
+              <dd id="suspect-1-department">Computer Science</dd>
+            </div>
+            <div class="suspect-detail-row">
+              <dt>Last Seen</dt>
+              <dd id="suspect-1-last-seen">Faculty corridor, 5:50 PM</dd>
+            </div>
+          </dl>
+
+          <p id="suspect-1-statement" class="suspect-statement">
+            "I left the building before 6 PM and never came back. I went
+            straight home and graded papers for the rest of the night."
+          </p>
+
+          <label class="accusation-label" for="accuse-suspect-1">
+            <input type="radio" id="accuse-suspect-1" name="accused-suspect" class="accusation-radio" value="suspect-1">
+            Accuse Sara Khan
+          </label>
+        </article>
+
+        <!-- Suspect 2: Ahmed Raza -->
+        <article id="suspect-2" class="suspect-card" data-suspect-id="suspect-2">
+          <img class="suspect-image" src="../images/ahmed-raza.png" alt="Ahmed Raza">
+          <h3 id="suspect-2-name" class="suspect-name">Ahmed Raza</h3>
+          <p id="suspect-2-occupation" class="suspect-occupation">Student Representative</p>
+
+          <dl class="suspect-details">
+            <div class="suspect-detail-row">
+              <dt>Age</dt>
+              <dd id="suspect-2-age">22</dd>
+            </div>
+            <div class="suspect-detail-row">
+              <dt>Department</dt>
+              <dd id="suspect-2-department">Student Council</dd>
+            </div>
+            <div class="suspect-detail-row">
+              <dt>Last Seen</dt>
+              <dd id="suspect-2-last-seen">Main library, 7:15 PM</dd>
+            </div>
+          </dl>
+
+          <p id="suspect-2-statement" class="suspect-statement">
+            "I was attending a student council meeting in the library
+            throughout the evening. At least six other students can
+            confirm I was there until closing."
+          </p>
+
+          <label class="accusation-label" for="accuse-suspect-2">
+            <input type="radio" id="accuse-suspect-2" name="accused-suspect" class="accusation-radio" value="suspect-2">
+            Accuse Ahmed Raza
+          </label>
+        </article>
+
+        <!-- Suspect 3: Ali Hassan -->
+        <article id="suspect-3" class="suspect-card" data-suspect-id="suspect-3">
+          <img class="suspect-image" src="../images/ali-hassan.png" alt="Ali Hassan">
+          <h3 id="suspect-3-name" class="suspect-name">Ali Hassan</h3>
+          <p id="suspect-3-occupation" class="suspect-occupation">Lab Assistant</p>
+
+          <dl class="suspect-details">
+            <div class="suspect-detail-row">
+              <dt>Age</dt>
+              <dd id="suspect-3-age">29</dd>
+            </div>
+            <div class="suspect-detail-row">
+              <dt>Department</dt>
+              <dd id="suspect-3-department">Physics Laboratory</dd>
+            </div>
+            <div class="suspect-detail-row">
+              <dt>Last Seen</dt>
+              <dd id="suspect-3-last-seen">Lab storage room, 8:30 PM</dd>
+            </div>
+          </dl>
+
+          <p id="suspect-3-statement" class="suspect-statement">
+            "I stayed in the laboratory organizing equipment until closing
+            time. The night security guard signed me out around 8:30 PM,
+            it's in his logbook."
+          </p>
+
+          <label class="accusation-label" for="accuse-suspect-3">
+            <input type="radio" id="accuse-suspect-3" name="accused-suspect" class="accusation-radio" value="suspect-3">
+            Accuse Ali Hassan
+          </label>
+        </article>
+
+      </form>
+    </section>
+
+    <!-- DETECTIVE ASSISTANCE SECTION -->
+
+    <section id="detective-assistance-section" class="detective-assistance-section"
+      aria-labelledby="assistance-heading">
+      <h2 id="assistance-heading" class="section-title">Detective Assistance</h2>
+
+      <div class="hint-container">
+        <button id="hint-button" class="hint-btn">
+          Request Hint
+        </button>
+
+        <p id="hint-display" class="hint-display" aria-live="polite">
+          No hints used.
+        </p>
+      </div>
+    </section>
+
+    <!-- FINAL ACCUSATION SECTION -->
+
+    <section id="final-accusation-section" class="final-accusation-section" aria-labelledby="final-accusation-heading">
+      <h2 id="final-accusation-heading" class="section-title">Make Your Decision</h2>
+
+      <p id="accusation-warning" class="accusation-warning">
+        &#9888; Review all evidence carefully before making your accusation.
+        Once you arrest a suspect, the case will be closed.
+      </p>
+
+      <div id="selected-suspect-info" class="selected-suspect-info">
+        No suspect selected.
+      </div>
+
+      <button id="arrest-suspect-button" class="arrest-btn">
+        Arrest Suspect
+      </button>
+    </section>
+
+    <!-- RESULT SECTION -->
+
+    <section id="result-section" class="result-section" aria-labelledby="result-heading">
+      <h2 id="result-heading" class="section-title">Case Outcome</h2>
+
+      <!-- Hidden until the player makes an accusation -->
+      <div id="case-solved-message" class="result-message hidden">
+        Case Solved! You identified the true culprit.
+      </div>
+
+      <div id="wrong-accusation-message" class="result-message hidden">
+        Wrong Accusation. The evidence points elsewhere.
+      </div>
+
+      <div id="final-detective-score" class="result-final-score hidden">
+        Final Score: <span id="final-score-value">0</span>
+      </div>
+
+      <div id="actual-culprit-name" class="result-culprit hidden">
+
+      </div>
+
+      <div id="case-explanation" class="case-explanation hidden">
+      </div>
+
+      <!-- Investigation Summary Panel -->
+      <div id="investigation-summary-panel" class="investigation-summary-panel hidden"
+        aria-labelledby="investigation-summary-heading">
+        <h3 id="investigation-summary-heading" class="investigation-summary-heading">
+          Investigation Summary
+        </h3>
+
+        <p class="investigation-summary-intro">
+          A full recap of how the case was solved, based on the evidence
+          you gathered and the statement that did not hold up.
+        </p>
+
+        <dl class="investigation-summary-details">
+          <div class="summary-detail-row" id="summary-evidence-row">
+            <dt class="summary-detail-label">Key Evidence</dt>
+            <dd id="summary-key-evidence" class="summary-detail-value">
+            </dd>
+          </div>
+
+          <div class="summary-detail-row" id="summary-contradiction-row">
+            <dt class="summary-detail-label">The Contradiction</dt>
+            <dd id="summary-contradiction" class="summary-detail-value">
+            </dd>
+          </div>
+
+          <div class="summary-detail-row" id="summary-outcome-row">
+            <dt class="summary-detail-label">Outcome</dt>
+            <dd id="summary-outcome" class="summary-detail-value">
+            </dd>
+          </div>
+        </dl>
+      </div>
+      <button id="play-again-button" class="play-again-btn hidden">
+        Play Again
+      </button>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+
+  <footer id="case-footer" class="case-footer">
+    <p class="footer-line">Every clue tells a story. Every story hides the truth.</p>
+    <p class="footer-noir-line">The shadows conceal many secrets, but evidence never lies.</p>
+  </footer>
+
+  <script src="app.js"></script>
+
+</body>
+
+</html>

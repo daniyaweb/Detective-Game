@@ -1,0 +1,610 @@
+
+
+/* BASIC RESET */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* PAGE THEME  */
+body.noir-theme {
+  background-color: #1a1a1a;
+  color: #e6e6e6;
+  font-family: 'Courier New', Courier, monospace;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Courier New', Courier, monospace;
+  color: #c9a24b;
+}
+
+/* Section title style used in every section heading */
+.section-title {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-bottom: 2px solid #c9a24b;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.hidden {
+  display: none;
+}
+
+/* HEADER SECTION */
+.case-header {
+  background-color: #111111;
+  border-bottom: 3px solid #c9a24b;
+  padding: 30px 20px;
+  position: relative;
+  text-align: center;
+}
+
+.case-header {
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+    url("../images/background-img.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+}
+
+.confidential-stamp {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  border: 2px solid #b22222;
+  color: #b22222;
+  padding: 5px 10px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  transform: rotate(-10deg);
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.detective-badge {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 12px rgba(212, 175, 55, 0.35));
+  flex-shrink: 0;
+}
+
+.case-title {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.case-subtitle {
+  font-size: 1.2rem;
+  margin: 5px 0;
+}
+
+.case-intro {
+  max-width: 600px;
+  margin: 15px auto 0 auto;
+  text-align: left;
+  font-size: 0.95rem;
+}
+
+/* MAIN CONTAINER / SHARED SECTION CARD LOOK  */
+.game-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+
+.case-file-section,
+.investigation-dashboard,
+.crime-scene-section,
+.evidence-board-section,
+.collected-evidence-section,
+.suspect-interviews-section,
+.detective-assistance-section,
+.final-accusation-section,
+.result-section {
+  background-color: #242424;
+  border: 1px solid #c9a24b;
+  border-radius: 6px;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+/* CASE FILE SECTION */
+.case-file-row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  border-bottom: 1px dashed #555555;
+  padding: 8px 0;
+}
+
+.case-file-label {
+  font-weight: bold;
+  color: #c9a24b;
+  margin: 0;
+}
+
+.case-file-value {
+  margin: 0;
+  text-align: right;
+}
+
+/*  INVESTIGATION DASHBOARD */
+.dashboard-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.stat-box {
+  background-color: #1a1a1a;
+  border: 1px solid #c9a24b;
+  border-radius: 6px;
+  padding: 15px;
+  text-align: center;
+  flex: 1;
+  min-width: 140px;
+}
+
+.stat-label {
+  display: block;
+  font-size: 0.8rem;
+  color: #b0b0b0;
+  margin-bottom: 5px;
+}
+
+.stat-value {
+  display: block;
+  font-size: 1.4rem;
+  color: #c9a24b;
+  font-weight: bold;
+}
+
+/* CRIME SCENE / CLUE CARDS */
+.clue-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.clue-card {
+  background-color: #1a1a1a;
+  border: 1px solid #c9a24b;
+  border-radius: 6px;
+  padding: 15px;
+  width: 220px;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Simple hover effect - card lifts up a little */
+.clue-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.clue-image {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.clue-title {
+  font-size: 1rem;
+  margin: 5px 0;
+}
+
+.clue-preview {
+  font-size: 0.85rem;
+  color: #b0b0b0;
+}
+
+.clue-full-description {
+  font-size: 0.85rem;
+  text-align: left;
+  margin-top: 10px;
+}
+
+.inspect-btn {
+  background-color: #c9a24b;
+  color: #1a1a1a;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  margin-top: 10px;
+  cursor: pointer;
+  font-family: 'Courier New', Courier, monospace;
+  transition: background-color 0.2s ease;
+}
+
+.inspect-btn:hover {
+  background-color: #e6c068;
+}
+
+.inspect-btn.collected {
+  background-color: #2e2e2e;
+  color: #c9a24b;
+  border: 1px solid #c9a24b;
+  cursor: no-drop;
+  opacity: 0.85;
+}
+
+.inspect-btn.collected::before {
+  content: "✔ ";
+}
+
+/* EVIDENCE BOARD  */
+.evidence-board-subtitle {
+  text-align: center;
+  color: #b0b0b0;
+  font-style: italic;
+  margin-bottom: 15px;
+}
+
+.evidence-board {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  background-color: #111111;
+  border: 2px dashed #c9a24b;
+  border-radius: 6px;
+  padding: 20px;
+}
+
+.evidence-image-area {
+  flex: 0 0 200px;
+}
+
+.evidence-image {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 4px;
+  border: 1px solid #c9a24b;
+}
+
+.evidence-text-area {
+  flex: 1;
+  min-width: 200px;
+}
+
+.evidence-title {
+  margin-top: 0;
+}
+
+/* COLLECTED EVIDENCE SECTION */
+.collected-evidence-subtitle {
+  color: #b0b0b0;
+  font-style: italic;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.collected-evidence-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.collected-evidence-list li {
+  background-color: #1a1a1a;
+  border-left: 4px solid #c9a24b;
+  padding: 10px;
+  margin-bottom: 8px;
+  border-radius: 4px;
+}
+
+/* SUSPECT INTERVIEWS  */
+.suspect-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.suspect-card {
+  background-color: #1a1a1a;
+  border: 1px solid #c9a24b;
+  border-radius: 6px;
+  padding: 15px;
+  width: 250px;
+  text-align: center;
+}
+
+.suspect-card.selected-suspect {
+  border: 2px solid #c9a24b;
+  box-shadow: 0 0 12px rgba(201, 162, 75, 0.6);
+}
+
+.suspect-image {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.suspect-name {
+  margin: 5px 0;
+}
+
+.suspect-occupation {
+  color: #b0b0b0;
+  font-size: 0.85rem;
+  margin-bottom: 10px;
+}
+
+.suspect-details {
+  margin: 10px 0;
+  text-align: left;
+}
+
+.suspect-detail-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  border-bottom: 1px dashed #555555;
+  padding: 4px 0;
+}
+
+.suspect-statement {
+  font-size: 0.85rem;
+  font-style: italic;
+  margin: 10px 0;
+}
+
+.accusation-label {
+  display: block;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+/* Make the radio bigger and gold so the player can clearly
+   see which suspect they picked */
+.accusation-radio {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  accent-color: #c9a24b;
+}
+
+.accusation-radio:checked {
+  outline: 2px solid #c9a24b;
+}
+
+/* DETECTIVE ASSISTANCE (HINTS)  */
+.hint-container {
+  text-align: center;
+}
+
+.hint-btn {
+  background-color: #c9a24b;
+  color: #1a1a1a;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-family: 'Courier New', Courier, monospace;
+  transition: background-color 0.2s ease;
+}
+
+.hint-btn:hover {
+  background-color: #e6c068;
+}
+
+.hint-display {
+  margin-top: 10px;
+  color: #b0b0b0;
+  font-style: italic;
+}
+
+/* FINAL ACCUSATION SECTION */
+.final-accusation-section {
+  text-align: center;
+}
+
+.accusation-warning {
+  color: #b22222;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.selected-suspect-info {
+  background-color: #1a1a1a;
+  border: 1px solid #c9a24b;
+  border-radius: 4px;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+/* Arrest button stands out with a bold red color */
+.arrest-btn {
+  background-color: #b22222;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  padding: 14px 30px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.arrest-btn:hover {
+  background-color: #d12c2c;
+}
+
+/* RESULT SECTION (acts like the final police report) */
+.result-section {
+  text-align: center;
+}
+
+.result-message {
+  font-size: 1.3rem;
+  font-weight: bold;
+  padding: 12px;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+
+#case-solved-message {
+  background-color: #1c3a1c;
+  color: #8fd98f;
+  border: 1px solid #4caf50;
+}
+
+#wrong-accusation-message {
+  background-color: #3a1c1c;
+  color: #e08f8f;
+  border: 1px solid #b22222;
+}
+
+.result-final-score {
+  font-size: 1.1rem;
+  color: #c9a24b;
+  margin-bottom: 15px;
+}
+
+.result-culprit {
+  font-size: 1.2rem;
+  color: #c9a24b;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.case-explanation {
+  text-align: left;
+  background-color: #1a1a1a;
+  border-left: 4px solid #c9a24b;
+  padding: 12px;
+  margin-bottom: 15px;
+}
+
+/* Investigation Summary panel inside the Result section */
+.investigation-summary-panel {
+  background-color: #1a1a1a;
+  border: 1px solid #c9a24b;
+  border-radius: 6px;
+  padding: 15px;
+  text-align: left;
+}
+
+.investigation-summary-heading {
+  text-align: center;
+}
+
+.investigation-summary-intro {
+  color: #b0b0b0;
+  font-style: italic;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.summary-detail-row {
+  border-top: 1px dashed #555555;
+  padding-top: 10px;
+  margin-top: 10px;
+}
+
+.summary-detail-label {
+  font-weight: bold;
+  color: #c9a24b;
+}
+
+.play-again-btn {
+  background-color: #c9a24b;
+  color: #1a1a1a;
+  border: none;
+  border-radius: 4px;
+  padding: 12px 28px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  font-family: 'Courier New', Courier, monospace;
+  margin-top: 10px;
+  transition: background-color 0.2s ease;
+}
+
+.play-again-btn:hover {
+  background-color: #e6c068;
+}
+
+/* FOOTER */
+.case-footer {
+  text-align: center;
+  padding: 20px;
+  border-top: 2px solid #c9a24b;
+  color: #b0b0b0;
+  font-size: 0.85rem;
+}
+
+.footer-noir-line {
+  font-style: italic;
+  color: #c9a24b;
+  margin-top: 5px;
+}
+
+/* RESPONSIVE - TABLET  */
+@media (max-width: 768px) {
+  .dashboard-stats {
+    flex-direction: column;
+  }
+
+  .evidence-board {
+    flex-direction: column;
+  }
+
+  .case-file-row {
+    flex-direction: column;
+  }
+
+  .case-file-value {
+    text-align: left;
+  }
+}
+
+/* RESPONSIVE - MOBILE  */
+@media (max-width: 480px) {
+  .case-title {
+    font-size: 1.5rem;
+  }
+
+  .clue-card,
+  .suspect-card {
+    width: 100%;
+  }
+
+  .arrest-btn {
+    width: 100%;
+  }
+
+  .confidential-stamp {
+    position: static;
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+}
+
