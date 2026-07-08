@@ -1,7 +1,3 @@
-CASE #001: The Stolen Laptop
-
-An interactive detective investigation game built using HTML, CSS, and JavaScript. Players inspect evidence, interview suspects, and solve a university theft case by identifying the correct culprit.
-
 ## About the Project
 
 CASE #001: The Stolen Laptop is a browser-based detective game inspired by classic detective and noir mystery stories.
